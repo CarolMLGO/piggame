@@ -1,0 +1,37 @@
+ body {  
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(../img/back.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+
+
+.heading-secondary {
+	font-family:"Lato",sans-serif;
+	font-size: 2.5em;
+	text-transform: uppercase;
+	font-weight: 700;
+	display:inline-block;
+	background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark);
+	-webkit-background-clip:text;
+	color:transparent;
+	letter-spacing: 0.2rem;
+	transition: all .2s;
+
+	@include respond(tab-port) {
+			font-size: 3rem;
+	}
+
+	@include respond(phone) {
+		font-size: 2.5rem;
+	}
+
+	&:hover {
+		transform: skewY(2deg) skewX(15deg) scale(1.1);
+		text-shadow: .5rem 1rem 2rem rgba($color-black,0.2);
+	}
+}
